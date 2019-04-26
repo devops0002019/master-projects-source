@@ -125,42 +125,7 @@ ul {
 
 
 
-/*
 
-PAGE
-
-------------------------------------------------------------------------*/
-#page {
-	--nav-height:0px;
-	padding: var(--nav-height)  0px;
-}
-
-
-
-
-
-
-/*
-
-COLUMNS
-
-------------------------------------------------------------------------*/
-.column{
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	/* width: 100%; */
-}
 
 
 
@@ -180,8 +145,6 @@ COLUMNS
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right center;
-
-	--bg-img-1: url("/src/img/gym1.jpg");
 
 	--bg-gradient-1: #0F2027;
 	--bg-gradient-1: -webkit-linear-gradient(to right, rgba(44, 83, 100, 0.55), rgba(32, 58, 67, 0.52), rgba(15, 32, 39, 0.54));
@@ -283,7 +246,13 @@ COLUMNS
 }
 
 
+/*
 
+
+how to display them
+
+
+------------------------------------------------------------------------*/
 
 [class*="deep-img-"].id {
 	background-image: var(--bg-img-1);
@@ -292,6 +261,14 @@ COLUMNS
 
 [class*="deep-both-"].id {
 	background-image: var(--bg-gradient-1), var(--bg-img-1);
+}
+
+
+
+
+
+[class*="deep-both-"][class*="header19425"]{
+	background-image: var(--bg-gradient-2), url('img/img1.jpg') !important;
 }
 
 

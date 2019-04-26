@@ -1,4 +1,14 @@
 /*
+PAGE
+------------------------------------------------------------------------*/
+#page {
+	--nav-height: 0px;
+	padding: var(--nav-height) 0px;
+}
+
+
+
+/*
 
 control root of main classes
 
@@ -18,7 +28,7 @@ control root of main classes
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 50vh;
+	min-height: 30vh;
 
 }
 
@@ -34,18 +44,6 @@ control root of main classes
 }
 
 
-	[class*="module"].layout-start {
-		border:2px solid red;
-			--insert-align-items: start;
-		}
-
-
-.start-vertical-between {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	flex-direction: column;
-}
 
 /*
 
@@ -123,7 +121,6 @@ main classes and subclasses
 }
 
 
-
 .max-width-768 {
 	max-width: 768px;
 }
@@ -173,22 +170,6 @@ sidebar
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .grid {
 	--grid-padding: 0em;
 	--grid-margin: auto;
@@ -212,8 +193,6 @@ sidebar
 	border: var(--grid-border);
 	border-radius: var(--grid-border-radius);
 }
-
-
 
 
 .set-width-1024 {
@@ -292,17 +271,6 @@ sidebar
 .set-gap-128 {
 	grid-gap: 128px;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

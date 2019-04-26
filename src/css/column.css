@@ -1,13 +1,23 @@
-
-
 /*
 
-MODULE
+column
 
 ------------------------------------------------------------------------*/
+[class*="column"] {
+	height: auto;
+	max-width:100%;
+	margin: auto;
+}
 
 
-[class*="module"] {
+@media all and (min-width: 768px) {
+	[class*="column"] {
+		max-width: 100%;
+
+	}
+}
+
+[class*="column"] {
 	color: var(--insert-color);
 	background: var(--insert-background) ;
 	border: var(--insert-border);
@@ -43,11 +53,8 @@ MODULE
 	letter-spacing: var(--insert-letter-spacing);
 	-webkit-box-shadow: var(--insert-box-shadow);
 	box-shadow: var(--insert-box-shadow);
-}
 
-
-[class*="module"] {
-    --insert-color: inherit;
+	--insert-color: inherit;
 	--insert-background: inherit;
 	--insert-border: inherit;
 	--insert-border-radius: inherit;
@@ -64,7 +71,7 @@ MODULE
 	--insert-max-width: inherit;
 	--insert-min-width: inherit;
 	--insert-height: inherit;
-	--insert-min-height: 300px;
+	--insert-min-height: 20vh;
 	--insert-max-height: inherit;
 	--insert-box-shadow: inherit;
 
@@ -73,6 +80,7 @@ MODULE
 	--insert-text-align: inherit;
 	--insert-text-transform: inherit;
 	--insert-letter-spacing: inherit;
+
 	--h1-color: inherit;
 	--h1-padding: inherit;
 	--h2-margin: 0px 0px 64px;
@@ -206,7 +214,7 @@ column
 
 ------------------------------------------------------------------------  */
 
-[class*="module"] h1 {
+[class*="column"] h1 {
 	color: var(--h1-color);
 	background: var(--h1-background);
 	border: var(--h1-border);
@@ -222,7 +230,7 @@ column
 	letter-spacing: var(--h1-letter-spacing);
 }
 
-[class*="module"] h2 {
+[class*="column"] h2 {
 	color: var(--h2-color);
 	background: var(--h2-background);
 	border: var(--h2-border);
@@ -238,7 +246,7 @@ column
 	letter-spacing: var(--h2-letter-spacing);
 }
 
-[class*="module"] h3 {
+[class*="column"] h3 {
 	color: var(--h3-color);
 	background: var(--h3-background);
 	border: var(--h3-border);
@@ -254,7 +262,7 @@ column
 	letter-spacing: var(--h3-letter-spacing);
 }
 
-[class*="module"] h4 {
+[class*="column"] h4 {
 	display: var(--h4-display);
 	color: var(--h4-color);
 	background: var(--h4-background);
@@ -271,7 +279,7 @@ column
 	letter-spacing: var(--h4-letter-spacing);
 }
 
-[class*="module"] h5 {
+[class*="column"] h5 {
 	color: var(--h5-color);
 	background: var(--h5-background);
 	border: var(--h5-border);
@@ -287,7 +295,7 @@ column
 	letter-spacing: var(--h5-letter-spacing);
 }
 
-[class*="module"] h6 {
+[class*="column"] h6 {
 	color: var(--h6-color);
 	background: var(--h6-background);
 	border: var(--h6-border);
@@ -303,7 +311,7 @@ column
 	letter-spacing: var(--h6-letter-spacing);
 }
 
-[class*="module"] p {
+[class*="column"] p {
 	color: var(--p-color);
 	background: var(--p-background);
 	border: var(--p-border);
@@ -321,7 +329,7 @@ column
 	letter-spacing: var(--p-letter-spacing);
 }
 
-[class*="module"] span {
+[class*="column"] span {
 	color: var(--span-color);
 	font-size: var(--span-font-size);
 	font-weight: var(--span-font-weight);
@@ -329,7 +337,7 @@ column
 	text-shadow: var(--span-text-shadow);
 }
 
-[class*="module"] img {
+[class*="column"] img {
 	-o-object-fit: var(--img-object-fit);
 	object-fit: var(--img-object-fit);
 	height: var(--img-height);
@@ -346,9 +354,9 @@ column
 
 
 
-[class*="module"] i.fa,
-[class*="module"] i.fas,
-[class*="module"] i.fab {
+[class*="column"] i.fa,
+[class*="column"] i.fas,
+[class*="column"] i.fab {
 	color: var(--fa-color);
 	border: var(--fa-border);
 	border-radius: var(--fa-border-radius);
@@ -370,7 +378,7 @@ column
 }
 
 
-[class*="module"] a {
+[class*="column"] a {
 	color: var(--a-color);
 	margin: var(--a-margin);
 	line-height: var(--a-line-height);
@@ -379,14 +387,14 @@ column
 }
 
 
-[class*="module"] ul.list-format,
-[class*="module"] ul.list-format li {
+[class*="column"] ul.list-format,
+[class*="column"] ul.list-format li {
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-[class*="module"] ul[class*="list-format"] li > *:before {
+[class*="column"] ul[class*="list-format"] li > *:before {
 	content: var(--list-content);
 	font-size: var(--list-font-size);
 	color: var(--list-color);
@@ -396,23 +404,40 @@ column
 
 
 
-
 /*
 
-grid
+column Helpers
 
 ------------------------------------------------------------------------  */
 
-[class*="module"] {
-	height: auto;
-	max-width:100%;
-	margin: auto;
+
+[class*="column"].layout-start {
+	border: 2px solid red;
+	--insert-align-items: start;
 }
 
 
-@media all and (min-width: 768px) {
-	[class*="module"] {
-		max-width: 100%;
-
-	}
+[class*="column"][class*="center-items"] {
+	--insert-display: flex;
+	--insert-justify-content: center;
+	--insert-align-items: center;
+	--insert-flex-direction: column;
+	--insert-text-align: center;
 }
+
+
+.start-vertical-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+
+.center-vertical-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+

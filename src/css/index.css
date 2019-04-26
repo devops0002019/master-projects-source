@@ -1,0 +1,34 @@
+
+/* loads default */
+@import url("default.css");
+/*Loads embed.css*/
+@import url('embed.css');
+/*Loads inventory.css*/
+@import url('inventory.css');
+/*Loads template_literals.css*/
+@import url('template_literals.css');
+/* loads form */
+@import url('form.css');
+/*Loads button.css*/
+@import url('button.css');
+/*Loads Library.css*/
+@import url('components.css');
+/*Loads footer.css*/
+@import url('footer.css');
+/*Loads header.css*/
+@import url('header.css');
+/*Loads navbar.css*/
+@import url('navbar.css');
+/* loads utilities */
+@import url("utilities.css");
+/* loads column */
+@import url("column.css");
+/* loads layouts */
+@import url("layouts.css");
+/* loads responsive_text */
+@import url("responsive_text.css");
+/* loads core */
+@import url("ui-3-core-v1.0.css");
+
+
+
