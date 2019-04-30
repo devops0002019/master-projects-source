@@ -1,23 +1,11 @@
 /*
-PAGE
+main classes
 ------------------------------------------------------------------------*/
-#page {
-	--nav-height: 0px;
-	padding: var(--nav-height) 0px;
-}
 
-
-
-/*
-
-control root of main classes
-
-------------------------------------------------------------------------  */
 
 .section {
 	--section-padding: 64px 0px;
 }
-
 
 [class*="section"] {
 	margin: auto;
@@ -25,15 +13,21 @@ control root of main classes
 	height: 100%;
 	width: 100%;
 	max-width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	min-height: 30vh;
 
 }
 
 
-[class*="section"].layout-reset {
+[class*="section"].reset {
 	margin: auto;
 	padding: var(--section-padding);
 	height: 100%;
@@ -42,6 +36,40 @@ control root of main classes
 	max-width: 100%;
 
 }
+
+
+.grid {
+	--grid-padding: 0px 8px;
+	--grid-margin: auto;
+	--grid-background: transparent;
+	--grid-border: none;
+	--grid-border-radius: 0;
+}
+
+.grid {
+	display: -ms-grid;
+	display: grid;
+	grid-gap: 1em;
+	-ms-grid-columns: 1fr;
+	grid-template-columns: 1fr;
+	height: 100%;
+	width: 100%;
+	max-width: var(--page-max-width);
+	padding: var(--grid-padding);
+	margin: var(--grid-margin);
+	background: var(--grid-background);
+	border: var(--grid-border);
+	border-radius: var(--grid-border-radius);
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -129,15 +157,16 @@ main classes and subclasses
 
 
 
-
-
-
-
 /*
 
 sidebar
 
 ------------------------------------------------------------------------  */
+
+.main-content {
+	width: 100%;
+	height: 100%;
+}
 
 @media only screen and (min-width: 768px) {
 	.grid-sidebar {
@@ -162,37 +191,16 @@ sidebar
 	}
 }
 
-.main-content {
-	width: 100%;
-	height: 100%;
-}
 
 
 
 
-.grid {
-	--grid-padding: 0em;
-	--grid-margin: auto;
-	--grid-background: transparent;
-	--grid-border: none;
-	--grid-border-radius: 0;
-}
 
-.grid {
-	display: -ms-grid;
-	display: grid;
-	grid-gap: 1em;
-	-ms-grid-columns: 1fr;
-	grid-template-columns: 1fr;
-	height: 100%;
-	width: 100%;
-	max-width: var(--page-max-width);
-	padding: var(--grid-padding);
-	margin: var(--grid-margin);
-	background: var(--grid-background);
-	border: var(--grid-border);
-	border-radius: var(--grid-border-radius);
-}
+
+
+
+
+
 
 
 .set-width-1024 {
@@ -271,8 +279,6 @@ sidebar
 .set-gap-128 {
 	grid-gap: 128px;
 }
-
-
 
 
 /*

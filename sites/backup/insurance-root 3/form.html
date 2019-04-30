@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="theme-color" content="#008000" />
+	<title>Get Quotes</title>
+
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="/src/css/index.css">
+
+	<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<body id="site">
+
+
+
+
+				<form>
+					<div id="Progress">
+						<div id="progressBar">1%</div>
+					</div>
+
+					<div class="field-name">
+						<p class="question">What is your name?</p>
+						<i class="fas fa-user icon-start"></i>
+						<input type="text" placeholder="Username" required />
+						<i class="fas fa-arrow-down enter-next"></i>
+					</div>
+					<div class="field-email innactive">
+						<p class="question">What is your Email?</p>
+						<i class="fas fa-envelope icon-start"></i>
+						<input type="email" placeholder="Email" required />
+						<i id="fa" class="fas fa-arrow-down enter-next"></i>
+					</div>
+					<div class="field-test innactive">
+						<p class="question">SELECT YOUR GENDER</p>
+						<i class="fas fa-user icon-start"></i>
+						<select class="select" name="gender">
+					<option value="">Select</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+						<i id="fa" class="fas fa-arrow-down enter-next"></i>
+					</div>
+					<div class="field-finish innactive">
+						<i class="fas fa-heart"></i>
+						<i class="fas fa-arrow-down enter-next"></i>
+						<i class="fas fa-heart"></i>
+					</div>
+				</form>
+		
+
+
+
+
+
+
+	<script src="js/animated-form.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>
