@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="theme-color" content="#008000" />
+    <title>Get Quotes</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption|PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+
+
+    <style>
+        .center-content {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #form {
+
+            position: relative;
+            height: 100%;
+            max-height: 800px;
+            width: 100%;
+            /*            border: 1px solid red;*/
+            max-width: var(--page-max-width);
+            margin: auto;
+        }
+
+
+
+        .progress {
+            z-index: 9999999;
+            max-width: 780px;
+            margin: auto;
+            min-height: 800px;
+
+        }
+
+
+        progress:after {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+        }
+
+        progress::-moz-progress-bar {
+            border-radius: 12px;
+            background: #FFF;
+            box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            progress {
+                border-radius: 12px;
+                background: #ffffff;
+                height: 10px;
+            }
+        }
+
+        progress::-webkit-progress-bar {
+            background: transparent;
+        }
+
+        progress::-webkit-progress-value {
+            border-radius: 12px;
+            background: var(--primary);
+            box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        progress::-webkit-progress-value {
+            transition: width 2s ease;
+        }
+
+
+        .percentage {
+            font-size: 2em;
+            display: block;
+            opacity: 1;
+            animation: fade 1s linear;
+        }
+
+
+        @keyframes fade {
+
+            0% {
+                opacity: 0
+            }
+
+            ,
+            50% {
+                opacity: 1
+            }
+
+            ,
+            100% {
+                opacity: 9
+            }
+        }
+    </style>
+
+</head>
+
+<body id="site" class="center-content ">
+
+
+    <form action="thankyou.html" id="form">
+
+        <div class="progress">
+            <h3 id="status"><span class="percentage">1% </span>Completed</h3>
+            <progress id="progressBar" value="0" max="100"></progress>
+        </div>
+
+
+        <div class="field-coverage input-radio">
+
+            <p class="question">When would you like coverage?</p>
+
+            <input id="immediately" type="radio" value="immediately" name="coverage" required />
+            <label for="immediately" id="plus" class="enter-next">Immediately</label>
+
+            <input id="2months" type="radio" value="male" name="coverage" required />
+            <label for="2months" id="plus" class="enter-next">Within 2 months</label>
+
+            <input id="notsure" type="radio" value="female" name="coverage" required />
+            <label for="notsure" id="plus" class="enter-next">Not sure</label>
+
+        </div>
+
+
+        <div class="field-username input-text innactive">
+
+            <p class="question">What is your name?</p>
+
+            <i class="fas fa-user-edit icon-start"></i>
+
+            <input type="text" placeholder="Name" required />
+
+            <i id="plus" class="fas fa-arrow-down enter-next"></i>
+
+        </div>
+
+        <div class="field-email input-text innactive">
+
+            <p class="question">What is your Email?</p>
+
+            <i class="fas fa-envelope icon-start"></i>
+
+            <input type="email" placeholder="Email" required />
+
+            <i id="plus" class="fas fa-arrow-down enter-next"></i>
+
+        </div>
+
+        <div class="field-gender input-radio-x2 innactive">
+
+            <p class="question">What is your Gender?</p>
+
+            <input id="male" value="male" type="radio" name="gender" required />
+            <label for="male" id="plus" class="enter-next first-button">Male</label>
+
+            <input id="female" type="radio" value="female" name="gender" required />
+            <label for="female" id="plus" class="enter-next second-button">Female</label>
+
+        </div>
+
+        <div class="field-submit input-submit innactive">
+
+            <input id="submit" type="submit" value="submit" />
+
+        </div>
+
+    </form>
+
+    <script src="js/animated-form.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
